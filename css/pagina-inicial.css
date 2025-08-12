@@ -1,0 +1,281 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(221, 221, 219);
+}
+
+.logo{
+  width: 100px;
+}
+
+.navbar{
+  background-color: rgb(221, 221, 219);
+  padding: 10px 60px 10px 60px;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(187, 187, 185, 0.45);
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.buttons{
+  vertical-align: top;
+  display: flex;
+  list-style: none;
+  margin-top: 1%;
+}
+
+
+a{
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.login{
+  background-color: rgb(31, 79, 156);
+  padding: 10px 25px 10px 25px;
+  border-radius: 20px;
+  color: white;
+  transition: background-color 0.4s;
+  box-shadow: 0 1px 10px rgb(187, 187, 185);
+}
+
+.login:hover{
+  transition: background-color 0.4s;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+.links{
+  transition: color 0.4s;
+  color: rgb(31, 79, 156);
+}
+
+.links:hover{
+  transition: color 0.4s;
+  color: black;
+}
+
+.logo-inicio{
+  width: 600px;
+}
+
+.logo-login{
+  width: 500px;
+  height: 400px;
+  background-color: rgb(221, 221, 219);
+  background: linear-gradient(to bottom, rgb(223, 223, 220), rgb(221, 221, 219), rgb(211, 211, 207));
+  box-shadow: 0 1px 4px rgba(187, 187, 185, 0.45);
+  border-radius: 20px;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.inicio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 80px;
+  gap: 50px;
+  width: 100%;
+  height: 90vh;
+}
+
+.texto-login{
+  font-weight: 400;
+  font-family: Special Gothic Expanded One;
+}
+
+.colort{
+  color: rgb(31, 79, 156);
+}
+
+.log{
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 17px;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+  background-color: #d1d1d1;
+  padding: 10px 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.log-sub{
+  font-family: Roboto;
+  margin-top: 1%;
+  padding: 10px 35px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  background-color: rgb(31, 79, 156);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.log-sub:focus {
+  outline: none;
+}
+
+.log-sub:hover{
+  background-color: black;
+  border: 1px solid ;
+  transition: all 0.4s;
+}
+
+#email{
+  margin-top: 8%;
+}
+
+.logo-login a{
+  color: rgb(31, 79, 156);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.logo-login p{
+  font-family: Roboto;
+  font-weight: 400;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.sobreNos{
+  width: auto;
+  height: auto;
+  /* background-color: rgb(31, 79, 156); */
+  /* background: linear-gradient(45deg, rgb(25, 80, 161), rgb(31, 79, 156), rgb(20, 60, 130)); */
+  overflow: hidden;
+  background-color: black;
+  clip-path: inset(0 0 20px 0);
+}
+
+.content{
+  position: relative;
+}
+
+.video-car{
+  width: 100%;
+  opacity: 0.3;
+}
+
+.hSobre{
+  position: absolute;
+  font-family: Special Gothic Expanded One;
+  color: white;
+  bottom: 62%;
+  left: 6%;
+  z-index: 1;
+  font-size: 75px;
+}
+
+.descricao{
+  position: absolute;
+  font-family: Roboto;
+  font-size: 20px;
+  margin: 3%;
+  bottom: 43%;
+  left: 3%;
+  z-index: 1;
+  color: white;
+  text-align: justify;
+  font-weight: 300;
+  width: 900px;
+}
+
+.content span{
+  color: rgb(109, 154, 226);
+}
+
+
+.botoesSobre{
+  background-color: rgb(31, 79, 156);
+  padding: 10px 25px 10px 25px;
+  border-radius: 20px;
+  color: white;
+  position: absolute;
+  bottom: 41%;
+  left: 5.9%;
+  z-index: 1;
+  font-family: Roboto;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+}
+
+.botoesSobre:hover{
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  transition: all 0.2s;
+}
+
+#irLogin{
+  margin-left: 10rem;
+}
+
+.recursos{
+  width: 100%;
+  height: 80vh;
+  padding: 0 20px 0 20px;
+}
+
+.recursos h2{
+  font-family: Special Gothic Expanded One;
+  font-size: 50px;
+  text-align: right;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.recursos span{
+  color: rgb(31, 79, 156);
+}
+
+.info{
+  width: 900px;
+  border-radius: 20px;
+  background-color: #d1d1d1;
+  padding: 20px;
+  margin: auto;
+}
+
+.rec{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 260px 20px 260px;
+}
+
+#inf2{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.info img{
+  width: 130px;
+}
+
+.list-content{
+  width: 100%;
+  display: flex;
+}
+
+.info span{
+  color: rgb(31, 79, 156);;
+}
+
+.list-content ul{
+  color: rgb(31, 79, 156);;
+}
+
+

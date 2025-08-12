@@ -1,0 +1,95 @@
+CREATE DATABASE bdstockflow;
+USE bdstockflow;
+
+
+CREATE TABLE funcionario (
+    id_funcionario INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    tipo_usuario INT,
+    nome VARCHAR(50),
+    senha VARCHAR(255),
+    telefone VARCHAR(15),
+    cpf VARCHAR(14) UNIQUE,
+    email VARCHAR(50) UNIQUE
+) ENGINE=InnoDB;
+
+
+CREATE TABLE empresa (
+    id_empresa INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    senha VARCHAR(255),
+    tipo_usuario INT,
+    cod_usuario INT,
+    cnpj_empresa VARCHAR(18) UNIQUE,
+    nome_empresa VARCHAR(50),
+    telefone_empresa VARCHAR(15),
+    Cep VARCHAR(10) NOT NULL,
+    rua VARCHAR(50),
+    cidade VARCHAR(50),
+    estado VARCHAR(50),
+    numero VARCHAR(10),
+    bairro VARCHAR(50),
+    FOREIGN KEY (cod_usuario) REFERENCES funcionario(id_funcionario) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+CREATE TABLE veiculo (
+    id_veiculo INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    placa VARCHAR(7) NOT NULL UNIQUE,
+    cautelar LONGBLOB,
+    cor VARCHAR(15),
+    marca VARCHAR(20),
+    categoria VARCHAR(15),
+    statusveiculo VARCHAR(15),
+    modelo VARCHAR(50),
+    tipo VARCHAR(50),
+    valor DECIMAL(10,2),
+    ano INT,
+    custos_extra DECIMAL(10,2)
+) ENGINE=InnoDB;
+
+
+CREATE TABLE estoque (
+    id_estoque INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    cod_automovel INT,
+    cod_empresa INT,
+    FOREIGN KEY (cod_automovel) REFERENCES veiculo(id_veiculo) ON DELETE CASCADE,
+    FOREIGN KEY (cod_empresa) REFERENCES empresa(id_empresa) ON DELETE CASCADE
+) ENGINE=INNODB;
+
+CREATE TABLE venda (
+    id_venda INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    cod_usuario INT,
+    valor_entrada DECIMAL(10,2),
+    valor_venda DECIMAL(10,2),
+    cod_automovel INT,
+    cod_cli INT,
+    data_venda DATE,
+    FOREIGN KEY (cod_usuario) REFERENCES funcionario(id_funcionario) ON DELETE CASCADE,
+    FOREIGN KEY (cod_automovel) REFERENCES veiculo(id_veiculo) ON DELETE CASCADE,
+    FOREIGN KEY (cod_cli) REFERENCES cliente(id_cliente) ON DELETE CASCADE
+) ENGINE=INNODB;
+
+CREATE TABLE imagem_veiculo (
+    id_imagem INT AUTO_INCREMENT PRIMARY KEY,
+    cod_veiculo INT,
+    caminho_imagem VARCHAR(255),
+    FOREIGN KEY (cod_veiculo) REFERENCES veiculo(id_veiculo)
+);
+
+
+INSERT INTO funcionario (
+    tipo_usuario,
+    nome,
+    senha,
+    telefone,
+    cpf,
+    email
+) VALUES (
+    1,
+    'João da Silva',
+    '12345', -- senha criptografada (exemplo)
+    '(11) 91234-5678',
+    '123.456.789-00',
+    'joao.silva@email.com'
+);
+
