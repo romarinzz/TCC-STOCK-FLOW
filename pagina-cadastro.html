@@ -23,48 +23,45 @@
 
     <div class="container">
 
-      <form action="">
+      <form action="PHP/CadEmpresa.php" method="post">
         <div class="title">
           <h2>Crie sua <span>conta</span></h2>
         </div>
         <div class="divs" id="dados-empresa">
-          <label for="empresas">Selecione: </label>
-          <select id="empresas">
-            <option value="Revendedor">Revendedor</option>
-            <option value="Concessionaria" selected>Concessionária</option>
-            <option value="Empresa">Empresa</option>
-          </select>
+          
 
           <label for="cnpj">CNPJ</label>
-          <input type="text" placeholder="Informe seu cnpj" id="cnpj">
+          <input type="text" placeholder="Informe seu cnpj" id="cnpj" name="cnpj">
 
           <label for="nome-fantasia">Nome Fantasia</label>
-          <input type="text" placeholder="Informe seu nome fantasia" id="nome-fantasia">
+          <input type="text" placeholder="Informe seu nome fantasia" id="nome-fantasia" name="nomefantasia">
 
           <label for="email">Email</label>
-          <input type="email" placeholder="Informe seu melhor email" id="email">
+          <input type="email" placeholder="Informe seu melhor email" id="email" name="email">
 
           <label for="telefone">Telefone</label>
-          <input type="tel" placeholder="Seu telefone" id="telefone">
+          <input type="tel" placeholder="Seu telefone" id="telefone" name="telefone">
 
           <label for="cep">CEP</label>
-          <input type="text" placeholder="Seu CEP" id="cep">
+          <input type="text" placeholder="Seu CEP" id="cep" name="cep">
         </div>
 
           <div class="divs" id="metade">
             <label for="endereco">Endereço</label>
-            <input type="text" placeholder="Seu endereço" id="endereco">
+            <input type="text" placeholder="Seu endereço" id="endereco" name="endereco">
 
             <label for="numero">N°</label>
-            <input type="number" placeholder="Informe seu N°" id="numero">
+            <input type="number" placeholder="Informe seu N°" id="numero" name="numero">
 
             <label for="bairro">Bairro</label>
-            <input type="text" placeholder="Seu bairro" id="bairro">
+            <input type="text" placeholder="Seu bairro" id="bairro" name="bairro">
 
-            <label for="complemento">Complemento</label>
-            <input type="text" placeholder="Complemento" id="complemento">
+            <label for="estado">Estado</label>
+            <input type="text" placeholder="Seu Estado" id="estado" name="estado">
 
-            <label for="estados">Estado</label>
+
+
+            <!-- <label for="estados">Estado</label>
             <select id="estados"> 
               <option value="Acre">Acre</option>
               <option value="Alagoas">Alagoas</option>
@@ -93,10 +90,10 @@
               <option value="São Paulo" selected>São Paulo</option>
               <option value="Sergipe">Sergipe</option>
               <option value="Tocantins">Tocantins</option>
-            </select>
+            </select>  -->
 
             <label for="cidade">Cidade</label>
-            <input type="text" placeholder="Informe sua cidade" id="cidade">
+            <input type="text" placeholder="Informe sua cidade" id="cidade" name="cidade">
 
             <input type="submit" id="submit" value="Cadastrar">
             <p>Ir para o <a href="pagina-login.html">Login.</a></p>
